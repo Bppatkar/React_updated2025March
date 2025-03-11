@@ -1,18 +1,112 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  margin: 50px;
-  background-color: #f5dcc4;
+  font-family: 'Arial', sans-serif;
 }
 
+body {
+  background-color: #F5EFFF;
+  color: #333;
+  margin: 50px;
+}
+
+/* Navbar */
+.navbar {
+  background: #CDC1FF;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Store Name */
+.backTOhome {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Navigation Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #A294F9;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #A294F9;
+  background: white;
+  outline: none;
+  width: 250px;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background: #A294F9;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background: #8C7AE6;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* Product Cards */
 .card {
-  border: 1px solid #ddd;
+  background-color: #E5D9F2;
+  border: 1px solid #CDC1FF;
   padding: 15px;
   width: 300px;
-  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -21,12 +115,13 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Product image */
+/* Product Image */
 .card img {
   width: 100%;
   max-width: 230px;
@@ -36,7 +131,7 @@ body {
   background-color: #fff;
 }
 
-/* Product title */
+/* Product Title */
 .title {
   font-size: 18px;
   font-weight: bold;
@@ -44,7 +139,7 @@ body {
   color: #333;
 }
 
-/* Rating & Price container */
+/* Rating & Price */
 .small-part {
   margin-top: 15px;
   display: flex;
@@ -53,16 +148,17 @@ body {
   padding: 0 15px;
 }
 
-/* Price & Rating text */
 .price,
 .rating {
   font-size: 16px;
   font-weight: bold;
-  color: #555;
-  background: #e0e0e0;
+  color: white;
+  background: #A294F9;
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+/* Product Listing Grid */
 .products {
   margin-top: 50px;
   display: flex;
@@ -71,89 +167,18 @@ body {
   gap: 20px;
 }
 
-/* Input field container */
-.input-field {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 10px;
-}
-
-/* Search input */
-.input-field input {
-  width: 250px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-/* Input focus effect */
-.input-field input:focus {
-  border-color: #007bff;
-  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Search button */
-.input-field button {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* Button hover effect */
-.input-field button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-/* Responsive styling */
+/* Responsive Styles */
 @media (max-width: 480px) {
-  .input-field {
+  .search-bar {
     flex-direction: column;
     align-items: center;
   }
 
-  .input-field input {
+  .search-bar input {
     width: 90%;
   }
 
-  .input-field button {
+  .search-bar button {
     width: 95%;
   }
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #333;
-  color: white;
-}
-
-.search-bar {
-  display: flex;
-  gap: 10px;
-}
-
-.search-bar input {
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-}
-
-.search-bar button {
-  padding: 5px 10px;
-  background-color: #ff9800;
-  color: white;
-  border: none;
-  cursor: pointer;
 }
