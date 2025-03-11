@@ -32,15 +32,15 @@ function App() {
           value={searchProduct}
         />
         <button
-          onClick={() =>
+          onClick={() => {
             setfilteredProducts(
-              products.filter((product) =>
+              products.filter((product) => {
                 product.title
                   .toLowerCase()
-                  .includes(searchProduct.toLowerCase())
-              )
-            )
-          }
+                  .includes(searchProduct.toLowerCase());
+              })
+            );
+          }}
         >
           Search
         </button>
