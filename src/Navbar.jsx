@@ -47,19 +47,7 @@ const Navbar = ({
           onChange={(e) => setSearchProduct(e.target.value)}
           value={searchProduct}
         />
-        <button
-          onClick={() => {
-            setFilteredProducts(
-              products.filter((product) =>
-                product.title
-                  .toLowerCase()
-                  .includes(searchProduct.toLowerCase())
-              )
-            );
-          }}
-        >
-          Search
-        </button>
+        <button onClick={handleSearch}>Search</button>
       </div>
     </nav>
   );

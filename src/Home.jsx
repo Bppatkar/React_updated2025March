@@ -9,6 +9,7 @@ const Home = ({filteredProducts}) => {
             <ProductCard
               key={product.id}
               image={product.image}
+              id={product.id}
               title={product.title}
               price={product.price}
               rating={product.rating?.rate}
